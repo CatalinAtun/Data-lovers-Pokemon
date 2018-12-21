@@ -12,10 +12,25 @@
 
 // console.log(POKEMON.pokemon[0]); muestra lo que contiene la posición 0 del array
 
-let resultado = [];
-for (let i = 0; i < POKEMON.pokemon.length; i++){
+let result = [];
+function pokemonNames () {
+  for (let i = 0; i < POKEMON.pokemon.length; i++){
+    result.push(POKEMON.pokemon[i].name);   
+  } 
+  return (result)
+}
+// console.log(pokemonNames());
 
-  resultado.push(POKEMON.pokemon[i].name);
-} 
-console.log(resultado);
+function grassFilter () {
+  for (let i = 0; i < POKEMON.pokemon.length; i++){
+    if (POKEMON.pokemon[i].type[0] === "Grass" || POKEMON.pokemon[i].type[1] === "Grass" || POKEMON.pokemon[i].type[2] === "Grass") { 
+      result.push(POKEMON.pokemon[i])
+    } 
+  }
+  return (result);
+}
+
+
+
+
 
