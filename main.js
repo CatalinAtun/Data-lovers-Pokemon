@@ -1,7 +1,6 @@
 window.onload = function () {  
     // principal screen with all pokémon
-    document.getElementById("root").addEventListener;
-        document.getElementById("root").innerHTML = pokemonNames(); 
+    document.getElementById("root").innerHTML = pokemonNames(); 
     // filter buttons, 15 categories
     document.getElementById("grassButton").addEventListener("click", function(){
         document.getElementById("root").innerHTML = grassFilter(); 

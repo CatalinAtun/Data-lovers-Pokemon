@@ -44,7 +44,6 @@ function poisonFilter () {
   }
   return (result);
 }
-
 function fireFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Fire" || POKEMON.pokemon[i].type[1] === "Fire" || POKEMON.pokemon[i].type[2] === "Fire") { 
@@ -53,7 +52,6 @@ function fireFilter () {
   }
   return (result);
 }
-
 function flyingFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Flying" || POKEMON.pokemon[i].type[1] === "Flying" || POKEMON.pokemon[i].type[2] === "Flying") { 
@@ -62,7 +60,6 @@ function flyingFilter () {
   }
   return (result);
 }
-
 function waterFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Water" || POKEMON.pokemon[i].type[1] === "Water" || POKEMON.pokemon[i].type[2] === "Water") { 
@@ -71,7 +68,6 @@ function waterFilter () {
   }
   return (result);
 }
-
 function bugFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Bug" || POKEMON.pokemon[i].type[1] === "Bug" || POKEMON.pokemon[i].type[2] === "Bug") { 
@@ -80,7 +76,6 @@ function bugFilter () {
   }
   return (result);
 }
-
 function normalFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Normal" || POKEMON.pokemon[i].type[1] === "Normal" || POKEMON.pokemon[i].type[2] === "Normal") { 
@@ -89,7 +84,6 @@ function normalFilter () {
   }
   return (result);
 }
-
 function electricFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Electric" || POKEMON.pokemon[i].type[1] === "Electric" || POKEMON.pokemon[i].type[2] === "Electric") { 
@@ -98,7 +92,6 @@ function electricFilter () {
   }
   return (result);
 }
-
 function groundFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Ground" || POKEMON.pokemon[i].type[1] === "Ground" || POKEMON.pokemon[i].type[2] === "Ground") { 
@@ -107,7 +100,6 @@ function groundFilter () {
   }
   return (result);
 }
-
 function fightingFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Fighting" || POKEMON.pokemon[i].type[1] === "Fighting" || POKEMON.pokemon[i].type[2] === "Fighting") { 
@@ -116,7 +108,6 @@ function fightingFilter () {
   }
   return (result);
 }
-
 function psychicFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Psychic" || POKEMON.pokemon[i].type[1] === "Psychic" || POKEMON.pokemon[i].type[2] === "Psychic") { 
@@ -125,7 +116,6 @@ function psychicFilter () {
   }
   return (result);
 }
-
 function rockFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Rock" || POKEMON.pokemon[i].type[1] === "Rock" || POKEMON.pokemon[i].type[2] === "Rock") { 
@@ -134,7 +124,6 @@ function rockFilter () {
   }
   return (result);
 }
-
 function iceFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Ice" || POKEMON.pokemon[i].type[1] === "Ice" || POKEMON.pokemon[i].type[2] === "Ice") { 
@@ -143,7 +132,6 @@ function iceFilter () {
   }
   return (result);
 }
-
 function ghostFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Ghost" || POKEMON.pokemon[i].type[1] === "Ghost" || POKEMON.pokemon[i].type[2] === "Ghost") { 
@@ -152,7 +140,6 @@ function ghostFilter () {
   }
   return (result);
 }
-
 function dragonFilter () {
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Dragon" || POKEMON.pokemon[i].type[1] === "Dragon" || POKEMON.pokemon[i].type[2] === "Dragon") { 
