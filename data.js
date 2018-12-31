@@ -28,12 +28,13 @@ function pokemonImages () {
 }
 
 function grassFilter () {
+    let grassPokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
     if (POKEMON.pokemon[i].type[0] === "Grass" || POKEMON.pokemon[i].type[1] === "Grass" || POKEMON.pokemon[i].type[2] === "Grass") {
-      result.push(POKEMON.pokemon[i])
+      grassPokemon.push(POKEMON.pokemon[i])
     }
   }
-  return (result);
+  return (grassPokemon); 
 }
 
 function poisonFilter () {
