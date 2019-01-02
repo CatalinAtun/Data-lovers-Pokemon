@@ -4,7 +4,7 @@ window.onload = function () {
     // filter buttons, 15 categories
     /*document.getElementById("grassButton").addEventListener("click", function(){
         document.getElementById("root").innerHTML = grassFilter();
-    });
+    }); 
     document.getElementById("poisonButton").addEventListener("click", function(){
         document.getElementById("root").innerHTML = poisonFilter();
     });
@@ -66,18 +66,64 @@ document.querySelectorAll(".enlace").forEach(function(button){
     button.addEventListener("click", function(){
         switch (button.value) {
             case "Planta":
-                var grassPokemon = grassFilter();
+                let grassPokemon = grassFilter();
                 pokemonNamesFilter(grassPokemon);
                 break;
             case "Veneno":
-                document.getElementById("root").innerHTML = poisonFilter();
+                let poisonPokemon = poisonFilter();
+                pokemonNamesFilter(poisonPokemon)
                 break;
             case "Volador":
-                document.getElementById("root").innerHTML = flyingFilter();
+                let flyingPokemon = flyingFilter();
+                pokemonNamesFilter(flyingPokemon)
+                break;
+            case "Fuego":
+                let firePokemon = fireFilter();
+                pokemonNamesFilter(firePokemon);
+                break;
+            case "Agua":
+                let waterPokemon = waterFilter();
+                pokemonNamesFilter(waterPokemon);
+                break;
+            case "Bicho":
+                let bugPokemon = bugFilter();
+                pokemonNamesFilter(bugPokemon);
+                break;
+            case "Normal":
+                let normalPokemon = normalFilter();
+                pokemonNamesFilter(normalPokemon);
+                break;
+            case "Eléctrico":
+                let electricPokemon = electricFilter();
+                pokemonNamesFilter(electricPokemon);
+                break;
+            case "Tierra":
+                let groundPokemon = groundFilter();
+                pokemonNamesFilter(groundPokemon);
+                break;
+            case "Peleador":
+                let fightingPokemon = fightingFilter();
+                pokemonNamesFilter(fightingPokemon);
+                break;
+            case "Psiquico":
+                let psychicPokemon = psychicFilter();
+                pokemonNamesFilter(psychicPokemon);
+                break;
+            case "Roca":
+                let rockPokemon = rockFilter();
+                pokemonNamesFilter(rockPokemon);
+                break;
+            case "Hielo":
+                let icePokemon = iceFilter();
+                pokemonNamesFilter(icePokemon);
                 break;
             case "Fantasma":
-                var ghostPokemon = ghostFilter();
+                let ghostPokemon = ghostFilter();
                 pokemonNamesFilter(ghostPokemon);
+                break;
+            case "Dragón":
+                let dragonPokemon = dragonFilter();
+                pokemonNamesFilter(dragonPokemon);
                 break;
             default:
                 break;
