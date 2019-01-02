@@ -28,111 +28,148 @@ function pokemonImages () {
 }
 
 function grassFilter () {
-    let grassPokemon = [];
-  for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Grass" || POKEMON.pokemon[i].type[1] === "Grass" || POKEMON.pokemon[i].type[2] === "Grass") {
-      grassPokemon.push(POKEMON.pokemon[i])
-    }
-  }
-  return (grassPokemon);
+   let grass_pokemon = [];
+   for (let i = 0; i < POKEMON.pokemon.length; i++){
+       for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+           if(POKEMON.pokemon[i].type[e] === "Grass")
+               grass_pokemon.push(POKEMON.pokemon[i]);
+       }
+   }
+   return grass_pokemon;
 }
 
 function poisonFilter () {
+  let poison_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Poison" || POKEMON.pokemon[i].type[1] === "Poison" || POKEMON.pokemon[i].type[2] === "Poison") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Poison")
+              poison_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return poison_pokemon;
 }
-function fireFilter () {
-  for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Fire" || POKEMON.pokemon[i].type[1] === "Fire" || POKEMON.pokemon[i].type[2] === "Fire") {
-      result.push(POKEMON.pokemon[i])
-    }
-  }
-  return (result);
-}
+
 function flyingFilter () {
+  let flying_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Flying" || POKEMON.pokemon[i].type[1] === "Flying" || POKEMON.pokemon[i].type[2] === "Flying") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Flying")
+              flying_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return flying_pokemon;
 }
+
+function fireFilter () {
+  var fire_pokemon = [];
+  for (let i = 0; i < POKEMON.pokemon.length; i++){
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Fire")
+              fire_pokemon.push(POKEMON.pokemon[i]);
+      }
+  }
+  return fire_pokemon;
+}
+
 function waterFilter () {
+  let water_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Water" || POKEMON.pokemon[i].type[1] === "Water" || POKEMON.pokemon[i].type[2] === "Water") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Water")
+              water_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return water_pokemon;
 }
+
 function bugFilter () {
+  let bug_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Bug" || POKEMON.pokemon[i].type[1] === "Bug" || POKEMON.pokemon[i].type[2] === "Bug") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Bug")
+              bug_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return bug_pokemon;
 }
+
 function normalFilter () {
+  let normal_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Normal" || POKEMON.pokemon[i].type[1] === "Normal" || POKEMON.pokemon[i].type[2] === "Normal") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Normal")
+              normal_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return normal_pokemon;
 }
+
 function electricFilter () {
+  let electric_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Electric" || POKEMON.pokemon[i].type[1] === "Electric" || POKEMON.pokemon[i].type[2] === "Electric") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Electric")
+              electric_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return electric_pokemon;
 }
+
 function groundFilter () {
+  let ground_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Ground" || POKEMON.pokemon[i].type[1] === "Ground" || POKEMON.pokemon[i].type[2] === "Ground") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Ground")
+              ground_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return ground_pokemon;
 }
+
 function fightingFilter () {
+  let fighting_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Fighting" || POKEMON.pokemon[i].type[1] === "Fighting" || POKEMON.pokemon[i].type[2] === "Fighting") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Fighting")
+              fighting_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return fighting_pokemon;
 }
+
 function psychicFilter () {
+  let psychic_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Psychic" || POKEMON.pokemon[i].type[1] === "Psychic" || POKEMON.pokemon[i].type[2] === "Psychic") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Psychic")
+              psychic_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return psychic_pokemon;
 }
+
 function rockFilter () {
+  let rock_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Rock" || POKEMON.pokemon[i].type[1] === "Rock" || POKEMON.pokemon[i].type[2] === "Rock") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Rock")
+              rock_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return rock_pokemon;
 }
+
 function iceFilter () {
+  let ice_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Ice" || POKEMON.pokemon[i].type[1] === "Ice" || POKEMON.pokemon[i].type[2] === "Ice") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Ice")
+              ice_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return ice_pokemon;
 }
+
 function ghostFilter () {
     let ghost_pokemon = [];
     for (let i = 0; i < POKEMON.pokemon.length; i++){
@@ -143,11 +180,14 @@ function ghostFilter () {
     }
     return ghost_pokemon;
 }
+
 function dragonFilter () {
+  let dragon_pokemon = [];
   for (let i = 0; i < POKEMON.pokemon.length; i++){
-    if (POKEMON.pokemon[i].type[0] === "Dragon" || POKEMON.pokemon[i].type[1] === "Dragon" || POKEMON.pokemon[i].type[2] === "Dragon") {
-      result.push(POKEMON.pokemon[i])
-    }
+      for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+          if(POKEMON.pokemon[i].type[e] === "Dragon")
+              dragon_pokemon.push(POKEMON.pokemon[i]);
+      }
   }
-  return (result);
+  return dragon_pokemon;
 }
