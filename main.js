@@ -5,7 +5,7 @@ function globalFilter (condition) {
         document.getElementById("root").innerHTML = "";
          let filter = dataFilter(data, condition);
         for (let i = 0; i < filter.length; i++){
-            document.getElementById("root").innerHTML += filter[i].name + " " + filter[i].id + " " + '<img id="img" src="'+filter[i].img+'"/>';
+            document.getElementById("root").innerHTML += filter[i].name + " " + filter[i].num + " " + filter[i].type + '<img id="img" src="' + filter[i].img+'"/>';
     }
 })
 }
