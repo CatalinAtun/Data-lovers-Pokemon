@@ -1,5 +1,8 @@
-input.enlace{border:0; background-color:#fff; color:#000; cursor:pointer;}
-/* text-decoration:underline; */
+@media (min-width: 1200px){
+    .container {
+        max-width: 1440px;
+    }
+}
 body{
     font-family: 'Lato', sans-serif;
     background: url(img/background.jpg);
@@ -25,4 +28,30 @@ body{
     height: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+main{
+    padding-top: 30px;
+}
+.categories{
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px 10px 10px 10px;
+}
+
+input.enlace{
+    display: block;
+    border:0;
+    background-color:#fff;
+    cursor:pointer;
+    font-style: normal;
+    font-size: 22px;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.color-grass{
+    color: #9BCC50;
 }
