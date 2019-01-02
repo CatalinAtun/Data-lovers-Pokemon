@@ -1,5 +1,28 @@
 input.enlace{border:0; background-color:#fff; color:#000; cursor:pointer;}
 /* text-decoration:underline; */
+body{
+    font-family: 'Lato', sans-serif;
+    background: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
 #root {
     word-wrap: break-word;
+}
+
+.banner {
+    background: #F5F5F5;
+    border-bottom: 2px solid #08224E;
+}
+
+.color-black{
+    color: #08224E;
+}
+
+.logo-pokemon{
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
