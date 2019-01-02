@@ -34,7 +34,7 @@ function grassFilter () {
       grassPokemon.push(POKEMON.pokemon[i])
     }
   }
-  return (grassPokemon); 
+  return (grassPokemon);
 }
 
 function poisonFilter () {
@@ -134,9 +134,9 @@ function iceFilter () {
   return (result);
 }
 function ghostFilter () {
-    var ghost_pokemon = [];
+    let ghost_pokemon = [];
     for (let i = 0; i < POKEMON.pokemon.length; i++){
-        for (var e = 0; e < POKEMON.pokemon[i].type.length; e++) {
+        for (let e = 0; e < POKEMON.pokemon[i].type.length; e++) {
             if(POKEMON.pokemon[i].type[e] === "Ghost")
                 ghost_pokemon.push(POKEMON.pokemon[i]);
         }

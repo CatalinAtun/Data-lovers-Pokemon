@@ -55,3 +55,45 @@ input.enlace{
 .color-grass{
     color: #9BCC50;
 }
+.color-poison{
+    color: #B97FC9;
+}
+.color-flying{
+    color:#3DC7EF;
+}
+.color-fire{
+    color:#FD7D24;
+}
+.color-water{
+    color:#4592C4;
+}
+.color-bug{
+    color:#B7BB35;
+}
+.color-normal{
+    color:#A8A878;
+}
+.color-electric{
+    color:#EED535;
+}
+.color-ground{
+    color:#D4A82F;
+}
+.color-fighting{
+    color:#B1502D;
+}
+.color-psychic{
+    color:#F17CA8;
+}
+.color-rock{
+    color:#B8A85F;
+}
+.color-ice{
+    color:#98D8D8;
+}
+.color-ghost{
+    color:#7B62A3;
+}
+.color-dragon{
+    color:#7038F8
+}

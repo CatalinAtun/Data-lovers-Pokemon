@@ -66,7 +66,7 @@ document.querySelectorAll(".enlace").forEach(function(button){
     button.addEventListener("click", function(){
         switch (button.value) {
             case "Planta":
-                var grassPokemon = grassFilter();
+                let grassPokemon = grassFilter();
                 pokemonNamesFilter(grassPokemon);
                 break;
             case "Veneno":
@@ -76,7 +76,7 @@ document.querySelectorAll(".enlace").forEach(function(button){
                 document.getElementById("root").innerHTML = flyingFilter();
                 break;
             case "Fantasma":
-                var ghostPokemon = ghostFilter();
+                let ghostPokemon = ghostFilter();
                 pokemonNamesFilter(ghostPokemon);
                 break;
             default:
