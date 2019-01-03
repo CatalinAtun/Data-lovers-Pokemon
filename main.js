@@ -1,11 +1,9 @@
-window.onload = function () {
-
+document.getElementById("root").innerHTML = window.pokemon();
     function globalFilter (condition) {
         document.getElementById(condition).addEventListener("click", function(){
             document.getElementById("root").innerHTML = "";
-            let filter = dataFilter(data, condition);
+            let filter = window.filterData(data, condition);
             for (let i = 0; i < filter.length; i++){
-                //document.getElementById("root").innerHTML += filter[i].name + " " + filter[i].num + " " + filter[i].type + '<img id="img" src="' + filter[i].img+'"/>';
                 document.getElementById("root").innerHTML += pokemonBox(filter[i].name, filter[i].num, filter[i].type, filter[i].img);
             }
         })
@@ -42,5 +40,3 @@ window.onload = function () {
         globalFilter(buttonArray[i]);
     }
 
-
-};

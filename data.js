@@ -1,6 +1,7 @@
 //aquí van las funciones
 
-function dataFilter(data, condition) {
+let data = POKEMON.pokemon; // con window. no se visualiza la información en
+function filterData(data, condition) {
     let filtered = [];
     for (let i = 0; i < data.length; i++){
         for (let e = 0; e < data[i].type.length; e++) {
@@ -11,7 +12,6 @@ function dataFilter(data, condition) {
     }
     return filtered;
   }
-
 function pokemon(){
     let result = [];
     for (let i = 0; i < data.length; i++){
@@ -20,7 +20,7 @@ function pokemon(){
       return (result)
     }
 
-    console.log('hola')
+   
 
 
 

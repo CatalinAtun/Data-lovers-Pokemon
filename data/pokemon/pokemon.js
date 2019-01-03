@@ -1509,7 +1509,8 @@ const POKEMON = {
     "name": "Psyduck",
     "img": "http://www.serebii.net/pokemongo/pokemon/054.png",
     "type": [
-      "Water"
+      "Water",
+      "Psychic"
     ],
     "height": "0.79 m",
     "weight": "19.6 kg",
