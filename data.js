@@ -12,17 +12,3 @@ function filterData(data, condition) {
     }
     return filtered;
   }
-function pokemon(){
-    let result = [];
-    for (let i = 0; i < data.length; i++){
-        result.push(data[i].name + " " + data[i].num + " " + data[i].type + '<img id="img" src="' + data[i].img+'"/>');
-    } 
-      return (result)
-    }
-
-   
-
-
-
-
-
