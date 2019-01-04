@@ -4,7 +4,8 @@ function pokemon(){
         document.getElementById("root").innerHTML += pokemonBox(data[i].name, data[i].num, data[i].type, data[i].img);
     }
 }
-window.pokemon();
+document.getElementById("everyone").onclick = pokemon;
+pokemon();
 
 function globalFilter (condition) {
     document.getElementById(condition).addEventListener("click", function(){
