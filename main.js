@@ -15,8 +15,6 @@ function globalFilter (condition) {
         }
     })
 }
-
-
 //armar caja de pokemones según los boostrap card https://getbootstrap.com/docs/4.2/components/card/
 function pokemonBox (name, number, type, image){
     let typesFormated = formatTypes (type);
