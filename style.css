@@ -6,7 +6,7 @@
 body{
     font-family: 'Lato', sans-serif;
     background: url(img/background.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: top center;
     background-attachment: fixed;
 }
@@ -18,6 +18,14 @@ body{
 .banner {
     background: #F5F5F5;
     border-bottom: 2px solid #08224E;
+}
+.title-name{
+    font-size: 24px;
+    border-bottom: 2px;
+    font-style: normal
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    text-align: left;
 }
 
 .color-black{
@@ -45,7 +53,7 @@ input.enlace{
     background-color:#fff;
     cursor:pointer;
     font-style: normal;
-    font-size: 22px;
+    font-size: 20px;
     padding: 10px 10px 10px 10px;
     width: 100%;
     text-align: left;
@@ -112,6 +120,7 @@ input.enlace{
     padding: 5px;
     margin: 2.5px;
     border-radius: 5px;
+    display: inline-block;
 }
 .bg-grass{
     background: #9BCC50;
