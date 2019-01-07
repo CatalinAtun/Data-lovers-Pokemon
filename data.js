@@ -1,6 +1,6 @@
 //aquí van las funciones
 
-let data = POKEMON.pokemon; // con window. no se visualiza la información 
+let data = POKEMON.pokemon; // con window. no se visualiza la información
 
 function filterData(data, condition) {
     let filtered = [];
@@ -13,7 +13,7 @@ function filterData(data, condition) {
     }
     return filtered;
   }
-  
+
 
 //armar caja de pokemones según los boostrap card https://getbootstrap.com/docs/4.2/components/card/
 function pokemonBox (name, number, type, image){
