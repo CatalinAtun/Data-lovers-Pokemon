@@ -10,11 +10,9 @@ body{
     background-position: top center;
     background-attachment: fixed;
 }
-
 #root {
     word-wrap: break-word;
 }
-
 .banner {
     background: #F5F5F5;
     border-bottom: 2px solid #08224E;
@@ -27,17 +25,14 @@ body{
     width: 100%;
     text-align: left;
 }
-
 .color-black{
     color: #08224E;
 }
-
 .logo-pokemon{
     height: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 main{
     padding-top: 30px;
 }
@@ -46,7 +41,6 @@ main{
     border-radius: 5px;
     padding: 20px 10px 10px 10px;
 }
-
 input.enlace{
     display: block;
     border:0;
@@ -59,7 +53,6 @@ input.enlace{
     text-align: left;
     border-bottom: 1px solid #DDDDDD;
 }
-
 .color-grass{
     color: #9BCC50;
 }
@@ -105,16 +98,13 @@ input.enlace{
 .color-dragon{
     color:#7038F8
 }
-
 .pokemon-box{
     margin-bottom: 30px;
     cursor: pointer;
 }
-
 .pokemon-box .card-img-top img{
     height: 100px;
 }
-
 .tag-type{
     color: #ffffff;
     padding: 5px;
