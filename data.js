@@ -43,7 +43,6 @@ function pokemonBox (name, number, type, image){
     </div>
     </div>`;
 }
-
 //Se crea una función formaType que separa los tipos por la coma y los convierte en array y esto lo hace el split y esto hace que sean elementos independientes
 function formatTypes (types){
     let typesHtml = "";
@@ -55,9 +54,13 @@ function formatTypes (types){
 }
 
 
-let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];
 
-//a diferencia de la función pokemon, muestras solo los pokemons que le pasas a la funcion que este caso pokemones
+
+
+
+
+
+// simplemente le pasas un array de pokemones y llena con html de las cajas con la funcion pokemonBox
 function llenarConPokemones (pokemones){
 	document.getElementById("root").innerHTML = "";
     for (let i = 0; i < pokemones.length; i++){
@@ -66,60 +69,37 @@ function llenarConPokemones (pokemones){
 }
 
 //sirve para ordenar. dataPokemon = los pokemones que quieres ordenar, sortBy puede ser 'name' actualmente, sortOrder puede ser true o false donde true es ascendente y false es descendente
-function sortData(data, sortBy, sortOrder) {
-/* lo siguiente ordena según el nombre, dividiendose en ascendente(true) y descendente(false) */
-    if(sortBy === "name"){
-// ordena de forma ascendente
-        if(sortOrder === true)
-//aplicamos slice para que no modifique el array original y asi tenerlos sin orden por si quiere sacar el orden.  El sort hace el trabajo de filtrar ascendente o descendente
-        return data.slice().sort(function(a,b)){
+function sortData (dataPokemon, sortBy, sortOrder){
+  /* lo siguiente ordena según el nombre, dividiendose en ascendente(true) y descendente(false) */
+  if (sortBy === 'name') {
+	// ordena de forma ascendente
+    if (sortOrder === true){
+		//aplicamos slice para que no modifique el array original y asi tenerlos sin orden por si quiere sacar el orden.  El sort hace el trabajo de filtrar ascendente o descendente
+      return dataPokemon.slice().sort(function(a, b){
         let x = a[sortBy].toLowerCase();
         let y = b[sortBy].toLowerCase();
         if (x < y) {
           return -1;
         } if (x > y) {
-          return 1;        } else {
+          return 1;
+        } else {
           return 0;
         }
       });
-    }
-else if (sortOrder === false) {
-    return data.slice().sort(function(a,b)){
+	  // ordena de forma descendente
+    } else if (sortOrder == false){
+		//aplicamos slice para que no modifique el array original y asi tenerlos sin orden por si quiere sacar el orden. El sort hace el trabajo de filtrar ascendente o descendente
+      return dataPokemon.slice().sort(function(a, b){
         let x = a[sortBy].toLowerCase();
         let y = b[sortBy].toLowerCase();
-        if (x > y){
-            return 1;
-        } if (x < y){
-            return -1
+        if (x < y) {
+          return 1;
+        } if (x > y) {
+          return -1;
         } else {
-            return 0;
+          return 0;
         }
       });
     }
   }
 };
-
-    const dataPokemon = data
-    if (sortBy === "name" && sortOrder === "az"){
-      dataPokemon.sort((prevLetter, nextLetter)=> {
-        if (prevLetter.name > nextLetter.name) {
-          return 1;
-        }
-        if (prevLetter.name < nextLetter.name) {
-          return -1;
-        }
-        return 0;
-      })
-    }
-    if (sortBy === "name" && sortOrder === "za"){
-      dataPokemon.sort((a, b)=> {
-        if (prevLetter.name < nextLetter.name) {
-          return 1;
-        }
-        if (prevLetter.name > nextLetter.name) {
-          return -1;
-        }
-        return 0;
-      })
-    }
-}
