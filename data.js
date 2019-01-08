@@ -57,7 +57,48 @@ function formatTypes (types){
 
 let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];
 
-/*function sortData(data, sortBy, sortOrder) {
+//a diferencia de la función pokemon, muestras solo los pokemons que le pasas a la funcion que este caso pokemones
+function llenarConPokemones (pokemones){
+	document.getElementById("root").innerHTML = "";
+    for (let i = 0; i < pokemones.length; i++){
+        document.getElementById("root").innerHTML += pokemonBox(pokemones[i].name, pokemones[i].num, pokemones[i].type, pokemones[i].img);
+    }
+}
+
+//sirve para ordenar. dataPokemon = los pokemones que quieres ordenar, sortBy puede ser 'name' actualmente, sortOrder puede ser true o false donde true es ascendente y false es descendente
+function sortData(data, sortBy, sortOrder) {
+/* lo siguiente ordena según el nombre, dividiendose en ascendente(true) y descendente(false) */
+    if(sortBy === "name"){
+// ordena de forma ascendente
+        if(sortOrder === true)
+//aplicamos slice para que no modifique el array original y asi tenerlos sin orden por si quiere sacar el orden.  El sort hace el trabajo de filtrar ascendente o descendente
+        return data.slice().sort(function(a,b)){
+        let x = a[sortBy].toLowerCase();
+        let y = b[sortBy].toLowerCase();
+        if (x < y) {
+          return -1;
+        } if (x > y) {
+          return 1;        } else {
+          return 0;
+        }
+      });
+    }
+else if (sortOrder === false) {
+    return data.slice().sort(function(a,b)){
+        let x = a[sortBy].toLowerCase();
+        let y = b[sortBy].toLowerCase();
+        if (x > y){
+            return 1;
+        } if (x < y){
+            return -1
+        } else {
+            return 0;
+        }
+      });
+    }
+  }
+};
+
     const dataPokemon = data
     if (sortBy === "name" && sortOrder === "az"){
       dataPokemon.sort((prevLetter, nextLetter)=> {
@@ -81,4 +122,4 @@ let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal"
         return 0;
       })
     }
-} */
+}
