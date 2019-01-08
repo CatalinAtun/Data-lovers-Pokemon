@@ -1,6 +1,7 @@
 //aquí van las funciones
 
 let data = POKEMON.pokemon; // con window. no se visualiza la información
+let modifiedData = data; // esta variable se utilizara de forma global para cuando tengamos pokemones filtrados u ordenados se guarden aqui y se pueda utilizar en todos los sitios (seran los pokemones que se ven en el momento en la pagina). En un comienzo se ven todos por eso le seteamos que sea igual a data.
 
 function filterData(data, condition) {
     let filtered = [];
