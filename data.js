@@ -56,7 +56,7 @@ function formatTypes (types){
 
 let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];
 
-/* function sortData(data, sortBy, sortOrder) {
+/*function sortData(data, sortBy, sortOrder) {
     const dataPokemon = data
     if (sortBy === "name" && sortOrder === "az"){
       dataPokemon.sort((prevLetter, nextLetter)=> {
