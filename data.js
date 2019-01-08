@@ -14,6 +14,17 @@ function filterData(data, condition) {
     return filtered;
   }
 
+function pokemonWeightIMC(){
+    let result = [];
+    for (let i = 0; i < data.length; i++){
+        for (let e = 0; e < data[e].weight.length; e++){
+            if(data[e].weight !== ""){
+                result.push(data[e].name);
+            }
+        }
+        return result;
+    }
+  }
 
 //armar caja de pokemones según los boostrap card https://getbootstrap.com/docs/4.2/components/card/
 function pokemonBox (name, number, type, image){
@@ -42,4 +53,31 @@ function formatTypes (types){
     return typesHtml;
 }
 
+
 let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];
+
+/* function sortData(data, sortBy, sortOrder) {
+    const dataPokemon = data
+    if (sortBy === "name" && sortOrder === "az"){
+      dataPokemon.sort((prevLetter, nextLetter)=> {
+        if (prevLetter.name > nextLetter.name) {
+          return 1;
+        }
+        if (prevLetter.name < nextLetter.name) {
+          return -1;
+        }
+        return 0;
+      })
+    }
+    if (sortBy === "name" && sortOrder === "za"){
+      dataPokemon.sort((a, b)=> {
+        if (prevLetter.name < nextLetter.name) {
+          return 1;
+        }
+        if (prevLetter.name > nextLetter.name) {
+          return -1;
+        }
+        return 0;
+      })
+    }
+} */

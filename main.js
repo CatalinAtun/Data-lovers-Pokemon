@@ -18,6 +18,9 @@ function pokemon(){
 document.getElementById("everyone").onclick = pokemon;
 pokemon();
 
+document.getElementById("select").onclick = pokemonWeightIMC;
+
+
 for (let i = 0; i < buttonArray.length; i++){
     globalFilter(buttonArray[i]);
 }
