@@ -15,18 +15,6 @@ function filterData(data, condition) {
     return filtered;
   }
 
-function pokemonWeightIMC(){
-    let result = [];
-    for (let i = 0; i < data.length; i++){
-        for (let e = 0; e < data[e].weight.length; e++){
-            if(data[e].weight !== ""){
-                result.push(data[e].name);
-            }
-        }
-        return result;
-    }
-  }
-
 //armar caja de pokemones según los boostrap card https://getbootstrap.com/docs/4.2/components/card/
 function pokemonBox (name, number, type, image){
     let typesFormated = formatTypes (type);
@@ -43,6 +31,7 @@ function pokemonBox (name, number, type, image){
     </div>
     </div>`;
 }
+
 //Se crea una función formaType que separa los tipos por la coma y los convierte en array y esto lo hace el split y esto hace que sean elementos independientes
 function formatTypes (types){
     let typesHtml = "";
@@ -52,13 +41,6 @@ function formatTypes (types){
     }
     return typesHtml;
 }
-
-
-
-
-
-
-
 
 // simplemente le pasas un array de pokemones y llena con html de las cajas con la funcion pokemonBox
 function llenarConPokemones (pokemones){
@@ -103,3 +85,4 @@ function sortData (dataPokemon, sortBy, sortOrder){
     }
   }
 };
+

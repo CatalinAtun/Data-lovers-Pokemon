@@ -41,6 +41,7 @@ selectSort.addEventListener("change", function(){
 
 // globalfilter para taodos los botones de tipos
 let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];
+document.getElementById("select").onclick = pokemonWeightIMC;
 for (let i = 0; i < buttonArray.length; i++){
     globalFilter(buttonArray[i]);
 }
