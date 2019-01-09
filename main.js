@@ -22,26 +22,23 @@ function pokemon(){
 document.getElementById("everyone").onclick = pokemon;
 pokemon();
 
-//document.getElementById("select").onclick = pokemonWeightIMC;
-
 let selectSort = document.getElementById("select");
 // listener change se ejecuta cada vez que se cambia la opcion del select, con esto cada vez que se cambie aplicamos el orden
 selectSort.addEventListener("change", function(){
-	let valorSelect = selectSort.value;
-	var pokemonesOrdenados = modifiedData;
-	if(valorSelect === 'aZOrder'){
-		pokemonesOrdenados = sortData(modifiedData, 'name', true); // currentPokemon es el array de pokemones actuales que se ven, 'name' corresponde a que propiedad del objeto queremos ordener, true corresponde a si es ascendente(true) o descendente(false)
-	}else if(valorSelect === 'zAOrder'){
-		pokemonesOrdenados = sortData(modifiedData, 'name', false);
+	let valueSelect = selectSort.value;
+	let pokemonsOrdered = modifiedData;
+	if(valueSelect === 'aZOrder'){
+		pokemonsOrdered = sortData(modifiedData, 'name', true); // currentPokemon es el array de pokemones actuales que se ven, 'name' corresponde a que propiedad del objeto queremos ordener, true corresponde a si es ascendente(true) o descendente(false)
+	}else if(valueSelect === 'zAOrder'){
+		pokemonsOrdered = sortData(modifiedData, 'name', false);
 	}
-	//console.log(valorSelect, pokemonesOrdenados, modifiedData);
-	llenarConPokemones(pokemonesOrdenados);
+	//console.log(valueSelect, pokemonsOrdered, modifiedData);
+	fillWithPokemons(pokemonsOrdered);
 });
 
 
 // globalfilter para taodos los botones de tipos
 let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];
-document.getElementById("select").onclick = pokemonWeightIMC;
 for (let i = 0; i < buttonArray.length; i++){
     globalFilter(buttonArray[i]);
 }

@@ -43,10 +43,10 @@ function formatTypes (types){
 }
 
 // simplemente le pasas un array de pokemones y llena con html de las cajas con la funcion pokemonBox
-function llenarConPokemones (pokemones){
+function fillWithPokemons (pokemons){
 	document.getElementById("root").innerHTML = "";
-    for (let i = 0; i < pokemones.length; i++){
-        document.getElementById("root").innerHTML += pokemonBox(pokemones[i].name, pokemones[i].num, pokemones[i].type, pokemones[i].img);
+    for (let i = 0; i < pokemons.length; i++){
+        document.getElementById("root").innerHTML += pokemonBox(pokemons[i].name, pokemons[i].num, pokemons[i].type, pokemons[i].img);
     }
 }
 
@@ -68,8 +68,7 @@ function sortData (dataPokemon, sortBy, sortOrder){
           return 0;
         }
       });
-	  // ordena de forma descendente
-    } else if (sortOrder == false){
+    } else if (sortOrder == false){ // ordena de forma descendente
 		//aplicamos slice para que no modifique el array original y asi tenerlos sin orden por si quiere sacar el orden. El sort hace el trabajo de filtrar ascendente o descendente
       return dataPokemon.slice().sort(function(a, b){
         let x = a[sortBy].toLowerCase();
@@ -84,5 +83,5 @@ function sortData (dataPokemon, sortBy, sortOrder){
       });
     }
   }
-};
+}
 
