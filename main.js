@@ -7,7 +7,7 @@ function globalFilter (condition) {
 		modifiedData = filter;
         for (let i = 0; i < filter.length; i++){
             document.getElementById("root").innerHTML += pokemonBox(filter[i].name, filter[i].num, filter[i].type, filter[i].img);
-            document.getElementById("name-type").innerHTML = condition;
+            document.getElementById("name-type").innerHTML = document.getElementById(condition).value;
         }
     })
 }
@@ -24,9 +24,10 @@ pokemon();
 
 let selectSort = document.getElementById("select");
 // listener change se ejecuta cada vez que se cambia la opcion del select, con esto cada vez que se cambie aplicamos el orden
-selectSort.addEventListener("change", function(){
+selectSort.addEventListener("change", function(condition){
 	let valueSelect = selectSort.value;
 	let pokemonsOrdered = modifiedData;
+
 	if(valueSelect === 'aZOrder'){
 		pokemonsOrdered = sortData(modifiedData, 'name', true); // currentPokemon es el array de pokemones actuales que se ven, 'name' corresponde a que propiedad del objeto queremos ordener, true corresponde a si es ascendente(true) o descendente(false)
 	}else if(valueSelect === 'zAOrder'){
