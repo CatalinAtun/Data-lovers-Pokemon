@@ -3,7 +3,7 @@ const allPokemon = POKEMON.pokemon; // ESTA VARIABLE CONTENDRÁ TODOS LOS POKEMO
 let currentPokemon = allPokemon; // ESTA VARIABLE CONTENDRÁ TODOS LOS POKEMON QUE SE ESTAN VIENDO AL MOMENTO DE FILTRAR U ORDENAR O REALIZAR CUALQUIER MODIFICACIÓN A TODOS LOS POKEMON. SE INICIALIZA CON TODOS LOS POKEMON.
 
 //armar caja de pokemones según los boostrap card https://getbootstrap.com/docs/4.2/components/card/
-function pokemonBox (name, number, type, image){
+let pokemonBox = (name, number, type, image) => {
     let typesFormated = formatTypes (type);
     return `<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
     <div class="card w-100 pokemon-box">
@@ -20,7 +20,7 @@ function pokemonBox (name, number, type, image){
 }
 
 //Se crea una función formaType que separa los tipos por la coma y los convierte en array y esto lo hace el split y esto hace que sean elementos independientes
-function formatTypes (types){
+let formatTypes = (types) => {
     let typesHtml = "";
     for (let i = 0; i < types.length; i++){
         //span sirve para aplicar estilo a un texto https://developer.mozilla.org/es/docs/Web/HTML/Elemento/span, hace que quede al lado los elementos
@@ -30,7 +30,7 @@ function formatTypes (types){
 }
 
 // simplemente le pasas un array de pokemones y llena con html de las cajas con la funcion pokemonBox
-function fillWithPokemons (pokemons){
+let fillWithPokemons = (pokemons) => {
     // Limpiamos el html que haya dentro del div con id root. esto se hace para poder mostrar los nuevos pokemones.
     document.getElementById("root").innerHTML = "";
     for (let i = 0; i < pokemons.length; i++){
@@ -39,12 +39,12 @@ function fillWithPokemons (pokemons){
 }
 
 // addEventListener click para todos los botones de tipos de pokemon
-function clicksButtonType (idTypePokemon) {
+let clicksButtonType = (idTypePokemon) => {
     let buttonType = document.getElementById(idTypePokemon);
-    buttonType.addEventListener("click", function(){
-        // llamamos a la funcion filterByType que hace el trabajo de filtrarlos por tipo, pasandole a la funcion las variables allPokemon, que son todos los pokemones. Y idTypePokemon que es el tipo de pokemon (el id del boton).
-        // Guardamos lo que nos devuelve la funcion filterByType en la variable currentPokemon (global) que contiene los pokemones filtrados u ordenados.
-        currentPokemon = window.filterByType(allPokemon, idTypePokemon);
+    buttonType.addEventListener("click", () => {
+        // llamamos a la funcion window.pokemons.filterByType que hace el trabajo de filtrarlos por tipo, pasandole a la funcion las variables allPokemon, que son todos los pokemones. Y idTypePokemon que es el tipo de pokemon (el id del boton).
+        // Guardamos lo que nos devuelve la funcion window.pokemons.filterByType en la variable currentPokemon (global) que contiene los pokemones filtrados u ordenados.
+        currentPokemon = window.window.pokemons.filterByType(allPokemon, idTypePokemon);
 
         // Actualizamos el titulo del tipo de pokemon que estamos viendo o que vamos a ver.
         document.getElementById("name-type").innerHTML = buttonType.value;
@@ -61,7 +61,7 @@ for (let i = 0; i < buttonArray.length; i++){
 
 // cuando se hace click en el boton Ver Todos, se ejecuta la funcion fillWithPokemons pasandole la variable allPokemon que contiene todos los pokemones
 let buttonEveryone = document.getElementById("everyone");
-buttonEveryone.addEventListener('click', function(){
+buttonEveryone.addEventListener('click', () => {
     // Actualizamos el titulo colocandole el string Todos los Pokemón.
     document.getElementById("name-type").innerHTML = "Todos los pokemón";
     // Se ejecuta fillWithPokemons pasandole la variable con todos los pokemones sin filtrar ni ordenar.
@@ -75,7 +75,7 @@ fillWithPokemons(allPokemon);
 // Guardamos el elemento select que contiene las opciones de orden para los pokemon en la variable selectSort
 let selectSort = document.getElementById("select");
 // listener o evento change se ejecuta cada vez que se cambia la opcion del select, con esto cada vez que se cambie aplicamos un orden
-selectSort.addEventListener("change", function(){
+selectSort.addEventListener("change", () => {
     // Guardamos el valor de la opcion seleccionada en la variable valueSelect.
     let valueSelect = selectSort.value;
 
@@ -85,11 +85,11 @@ selectSort.addEventListener("change", function(){
     // Si el valor de la opcion seleccionada es aZOrder entonces debemos ordenar de forma ascendente
 	if(valueSelect === 'aZOrder'){
          // Se ejecuta la funcion sortOrder que ordena los pokemones que estan en la variable currentPokemon segun el nombre ('name') y deforma ascendente (true)
-		pokemonsOrdered = sortData(currentPokemon, 'name', true);
+		pokemonsOrdered = window.pokemons.sortData(currentPokemon, 'name', true);
     // Si el valor de la opcion seleccionada es zAOrder entonces debemos ordenar de forma descendente
     }else if(valueSelect === 'zAOrder'){
         // Se ejecuta la funcion sortOrder que ordena los pokemones que estan en la variable currentPokemon segun el nombre ('name') y deforma descendente (false)
-       pokemonsOrdered = sortData(currentPokemon, 'name', false);
+       pokemonsOrdered = window.pokemons.sortData(currentPokemon, 'name', false);
     // Si el valor de la opcion no es ninguna de las anteriores, entonces le decimos que los pokemones vuelvan o se mantengan en su posicion inicial.
     }else{
         pokemonsOrdered = currentPokemon;
