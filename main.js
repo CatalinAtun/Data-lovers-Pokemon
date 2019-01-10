@@ -1,5 +1,5 @@
 // Aca van las funciones que trabajan con el DOM
-const allPokemon = POKEMON.pokemon; // ESTA VARIABLE CONTENDRÁ TODOS LOS POKEMON SIN FILTRAR NI ORDENAR NI MODIFICADOS.
+const allPokemon = window.POKEMON.pokemon; // ESTA VARIABLE CONTENDRÁ TODOS LOS POKEMON SIN FILTRAR NI ORDENAR NI MODIFICADOS.
 let currentPokemon = allPokemon; // ESTA VARIABLE CONTENDRÁ TODOS LOS POKEMON QUE SE ESTAN VIENDO AL MOMENTO DE FILTRAR U ORDENAR O REALIZAR CUALQUIER MODIFICACIÓN A TODOS LOS POKEMON. SE INICIALIZA CON TODOS LOS POKEMON.
 
 //armar caja de pokemones según los boostrap card https://getbootstrap.com/docs/4.2/components/card/
