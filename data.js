@@ -12,7 +12,7 @@ window.pokemons = {
         }
         return filtered;
     },
-
+     
     //sirve para ordenar. dataPokemon = los pokemones que quieres ordenar, sortBy puede ser 'name' actualmente, sortOrder puede ser true o false donde true es ascendente y false es descendente
     sortData: (dataPokemon, sortBy, sortOrder) => {
         /* lo siguiente ordena según el nombre, dividiendose en ascendente(true) y descendente(false) */
@@ -47,4 +47,4 @@ window.pokemons = {
             }
         }
     }
-};
+  }
