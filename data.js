@@ -13,10 +13,10 @@ window.pokemons = {
         return filtered;
     },
 
-    computeStats: (data, filterByType) => {
-      return(filterByType.length*100/data.length).toFixed(2);
+    computeStats: (allPokemon, currentPokemon) => {
+      return(currentPokemon.length*100/allPokemon.length).toFixed(2);
     },
-     
+
     //sirve para ordenar. dataPokemon = los pokemones que quieres ordenar, sortBy puede ser 'name' actualmente, sortOrder puede ser true o false donde true es ascendente y false es descendente
     sortData: (dataPokemon, sortBy, sortOrder) => {
         /* lo siguiente ordena según el nombre, dividiendose en ascendente(true) y descendente(false) */
@@ -51,4 +51,5 @@ window.pokemons = {
             }
         }
     }
+    
   }

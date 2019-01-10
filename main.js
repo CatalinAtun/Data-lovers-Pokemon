@@ -19,6 +19,8 @@ let pokemonBox = (name, number, type, image) => {
     </div>`;
 }
 
+
+
 //Se crea una función formaType que separa los tipos por la coma y los convierte en array y esto lo hace el split y esto hace que sean elementos independientes
 let formatTypes = (types) => {
     let typesHtml = "";
@@ -42,7 +44,7 @@ let fillWithPokemons = (pokemons) => {
 let clicksButtonType = (idTypePokemon) => {
     // querySelectorAll trae un array de todos los elementos con el id que se le indique para poder recorer con un for despues
     let buttonType = document.querySelectorAll("#"+idTypePokemon);
-    for (var i = 0; i < buttonType.length; i++) {
+    for (let i = 0; i < buttonType.length; i++) {
         buttonType[i].addEventListener("click", () => {
             // llamamos a la funcion window.pokemons.filterByType que hace el trabajo de filtrarlos por tipo, pasandole a la funcion las variables allPokemon, que son todos los pokemones. Y idTypePokemon que es el tipo de pokemon (el id del boton).
             // Guardamos lo que nos devuelve la funcion window.pokemons.filterByType en la variable currentPokemon (global) que contiene los pokemones filtrados u ordenados.
@@ -53,6 +55,10 @@ let clicksButtonType = (idTypePokemon) => {
 
             // Llamamos a la funcion fillWithPokemons y le pasamos currentPokemon que contiene los pokemones filtrados arriba.
             fillWithPokemons(currentPokemon);
+            //función calcular
+            let average = window.pokemons.computeStats(allPokemon, currentPokemon);
+            document.getElementById("averagepokemon").innerHTML = `Esta categoría corresponde al: ${average}% de los Pokemones`;
+
         })
     }
 
@@ -65,7 +71,7 @@ for (let i = 0; i < buttonArray.length; i++){
 
 // cuando se hace click en el boton Ver Todos, se ejecuta la funcion fillWithPokemons pasandole la variable allPokemon que contiene todos los pokemones
 let buttonEveryone = document.querySelectorAll("#everyone");
-for (var i = 0; i < buttonEveryone.length; i++) {
+for (let i = 0; i < buttonEveryone.length; i++) {
 
 buttonEveryone[i].addEventListener('click', () => {
     // Actualizamos el titulo colocandole el string Todos los Pokemón.
@@ -74,8 +80,13 @@ buttonEveryone[i].addEventListener('click', () => {
     fillWithPokemons(allPokemon);
     // Debemos decirle que nuevamente los pokemones que estamos viendo son todos.
     currentPokemon = allPokemon;
+    //función calcular
+    let average = window.pokemons.computeStats(allPokemon, currentPokemon);
+    document.getElementById("averagepokemon").innerHTML = average;
+
     });
     }
+
 // se ejecuta fillWithPokemons en la primera carga del codigo pasandole la variable allPokemon que contiene todos los pokemones.
 fillWithPokemons(allPokemon);
 
