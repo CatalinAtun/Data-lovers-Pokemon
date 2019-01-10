@@ -65,12 +65,7 @@ let selectSort = document.getElementById("select");
 // listener change se ejecuta cada vez que se cambia la opcion del select, con esto cada vez que se cambie aplicamos el orden
 selectSort.addEventListener("change", function(condition){
 	let valueSelect = selectSort.value;
-<<<<<<< HEAD
-	let pokemonsOrdered = modifiedData;
-
-=======
 	let orderedPokemons = modifiedData;
->>>>>>> a87915caf96ab70d1fee2b0f97a9273ebed8a184
 	if(valueSelect === 'aZOrder'){
 		orderedPokemons = window.pokemons.sortData(modifiedData, 'name', true); // currentPokemon es el array de pokemones actuales que se ven, 'name' corresponde a que propiedad del objeto queremos ordener, true corresponde a si es ascendente(true) o descendente(false)
 	}else if(valueSelect === 'zAOrder'){
