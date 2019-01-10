@@ -40,18 +40,22 @@ let fillWithPokemons = (pokemons) => {
 
 // addEventListener click para todos los botones de tipos de pokemon
 let clicksButtonType = (idTypePokemon) => {
-    let buttonType = document.getElementById(idTypePokemon);
-    buttonType.addEventListener("click", () => {
-        // llamamos a la funcion window.pokemons.filterByType que hace el trabajo de filtrarlos por tipo, pasandole a la funcion las variables allPokemon, que son todos los pokemones. Y idTypePokemon que es el tipo de pokemon (el id del boton).
-        // Guardamos lo que nos devuelve la funcion window.pokemons.filterByType en la variable currentPokemon (global) que contiene los pokemones filtrados u ordenados.
-        currentPokemon = window.window.pokemons.filterByType(allPokemon, idTypePokemon);
+    // querySelectorAll trae un array de todos los elementos con el id que se le indique para poder recorer con un for despues
+    let buttonType = document.querySelectorAll("#"+idTypePokemon);
+    for (var i = 0; i < buttonType.length; i++) {
+        buttonType[i].addEventListener("click", () => {
+            // llamamos a la funcion window.pokemons.filterByType que hace el trabajo de filtrarlos por tipo, pasandole a la funcion las variables allPokemon, que son todos los pokemones. Y idTypePokemon que es el tipo de pokemon (el id del boton).
+            // Guardamos lo que nos devuelve la funcion window.pokemons.filterByType en la variable currentPokemon (global) que contiene los pokemones filtrados u ordenados.
+            currentPokemon = window.window.pokemons.filterByType(allPokemon, idTypePokemon);
 
-        // Actualizamos el titulo del tipo de pokemon que estamos viendo o que vamos a ver.
-        document.getElementById("name-type").innerHTML = buttonType.value;
+            // Actualizamos el titulo del tipo de pokemon que estamos viendo o que vamos a ver.
+            document.getElementById("name-type").innerHTML = document.getElementById(idTypePokemon).value;
 
-        // Llamamos a la funcion fillWithPokemons y le pasamos currentPokemon que contiene los pokemones filtrados arriba.
-        fillWithPokemons(currentPokemon);
-    })
+            // Llamamos a la funcion fillWithPokemons y le pasamos currentPokemon que contiene los pokemones filtrados arriba.
+            fillWithPokemons(currentPokemon);
+        })
+    }
+
 }
 // Se ejecuta clicksButtonType por cada uno de los tipos de pokemon (con un for) que en este caso estan como button.
 let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];

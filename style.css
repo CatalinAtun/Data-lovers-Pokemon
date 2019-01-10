@@ -10,6 +10,7 @@ body{
     background-position: top center;
     background-attachment: fixed;
 }
+
 #root {
     word-wrap: break-word;
 }
@@ -17,10 +18,16 @@ body{
     background: #F7CC3C;
     border-bottom: 2px solid #dea806;
 }
+
+.navbar{
+    padding: 0.2rem 0;
+}
+
 .titleBanner{
     text-align: left;
     font-family: 'Lato', sans-serif black;
     color: #063375;
+    margin:0;
 }
 
 .title-name{
@@ -35,11 +42,9 @@ body{
 }
 .logo-pokemon{
     height: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 main{
-    padding-top: 30px;
+    padding-top: 90px;
 }
 .categories{
     background: #ffffff;
@@ -162,4 +167,27 @@ input.enlace{
 }
 .bg-dragon{
     background:#7038F8
+}
+@media (min-width:992px) {
+    #navbarNav{
+        display: none !important;
+    }
+}
+@media (max-width:991px){
+    .navbar-collapse{
+        max-height: 40vh;
+        overflow-y: scroll;
+    }
+}
+@media (max-width: 575px){
+    .titleBanner{
+        font-size: 20px;
+    }
+    .navbar-brand{
+        margin-right: 0;
+    }
+    input.enlace{
+        font-size: 18px;
+        padding: 5px 15px 5px 15px;
+    }
 }
