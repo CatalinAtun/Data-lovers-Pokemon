@@ -64,15 +64,18 @@ for (let i = 0; i < buttonArray.length; i++){
 }
 
 // cuando se hace click en el boton Ver Todos, se ejecuta la funcion fillWithPokemons pasandole la variable allPokemon que contiene todos los pokemones
-let buttonEveryone = document.getElementById("everyone");
-buttonEveryone.addEventListener('click', () => {
+let buttonEveryone = document.querySelectorAll("#everyone");
+for (var i = 0; i < buttonEveryone.length; i++) {
+
+buttonEveryone[i].addEventListener('click', () => {
     // Actualizamos el titulo colocandole el string Todos los Pokemón.
     document.getElementById("name-type").innerHTML = "Todos los pokemón";
     // Se ejecuta fillWithPokemons pasandole la variable con todos los pokemones sin filtrar ni ordenar.
     fillWithPokemons(allPokemon);
     // Debemos decirle que nuevamente los pokemones que estamos viendo son todos.
     currentPokemon = allPokemon;
-});
+    });
+    }
 // se ejecuta fillWithPokemons en la primera carga del codigo pasandole la variable allPokemon que contiene todos los pokemones.
 fillWithPokemons(allPokemon);
 
