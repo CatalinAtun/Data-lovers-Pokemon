@@ -78,7 +78,7 @@ let clicksButtonType2 = (idTypePokemon) => {
             fillWithPokemons(currentPokemon);
             //función calcular
             let average = window.pokemons.computeStats(allPokemon, currentPokemon);
-            document.getElementById("averagepokemon").innerHTML = `Esta categoría corresponde al: ${average}% de los Pokemones`;
+            document.getElementById("averagepokemon").innerHTML = `Esta categoría corresponde al ${average}% de los Pokemones`;
 
         })
     }
@@ -92,10 +92,9 @@ for (let i = 0; i < buttonArray.length; i++){
 }
 
 // cuando se hace click en el boton Ver Todos, se ejecuta la funcion fillWithPokemons pasandole la variable allPokemon que contiene todos los pokemones
-let buttonEveryone = document.querySelectorAll("#everyone");
-for (let i = 0; i < buttonEveryone.length; i++) {
+let buttonEveryone = document.getElementById("everyone");
 
-buttonEveryone[i].addEventListener('click', () => {
+buttonEveryone.addEventListener('click', () => {
     // Actualizamos el titulo colocandole el string Todos los Pokemón.
     document.getElementById("name-type").innerHTML = "Todos los pokemón";
     // Se ejecuta fillWithPokemons pasandole la variable con todos los pokemones sin filtrar ni ordenar.
@@ -107,8 +106,22 @@ buttonEveryone[i].addEventListener('click', () => {
     document.getElementById("averagepokemon").innerHTML = average;
 
     });
-    }
+    let buttonEveryone2 = document.getElementById("everyone2");
 
+    
+    buttonEveryone2.addEventListener('click', () => {
+        // Actualizamos el titulo colocandole el string Todos los Pokemón.
+        document.getElementById("name-type").innerHTML = "Todos los pokemón";
+        // Se ejecuta fillWithPokemons pasandole la variable con todos los pokemones sin filtrar ni ordenar.
+        fillWithPokemons(allPokemon);
+        // Debemos decirle que nuevamente los pokemones que estamos viendo son todos.
+        currentPokemon = allPokemon;
+        //función calcular
+        let average = window.pokemons.computeStats(allPokemon, currentPokemon);
+        document.getElementById("averagepokemon").innerHTML = average;
+    
+        });
+        
 // se ejecuta fillWithPokemons en la primera carga del codigo pasandole la variable allPokemon que contiene todos los pokemones.
 fillWithPokemons(allPokemon);
 
