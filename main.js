@@ -1,5 +1,5 @@
 // Aca van las funciones que trabajan con el DOM
-const allPokemon = window.POKEMON.pokemon; // ESTA VARIABLE CONTENDRÁ TODOS LOS POKEMON SIN FILTRAR NI ORDENAR NI MODIFICADOS.
+const allPokemon = window.POKEMON.pokemon; 
 let currentPokemon = allPokemon; // ESTA VARIABLE CONTENDRÁ TODOS LOS POKEMON QUE SE ESTAN VIENDO AL MOMENTO DE FILTRAR U ORDENAR O REALIZAR CUALQUIER MODIFICACIÓN A TODOS LOS POKEMON. SE INICIALIZA CON TODOS LOS POKEMON.
 
 //armar caja de pokemones según los boostrap card https://getbootstrap.com/docs/4.2/components/card/
@@ -18,8 +18,6 @@ let pokemonBox = (name, number, type, image) => {
     </div>
     </div>`;
 }
-
-
 
 //Se crea una función formaType que separa los tipos por la coma y los convierte en array y esto lo hace el split y esto hace que sean elementos independientes
 let formatTypes = (types) => {
@@ -63,10 +61,34 @@ let clicksButtonType = (idTypePokemon) => {
     }
 
 }
+// addEventListener click para todos los botones de tipos de pokemon
+let clicksButtonType2 = (idTypePokemon) => {
+    // querySelectorAll trae un array de todos los elementos con el id que se le indique para poder recorer con un for despues
+    let buttonType = document.querySelectorAll("#"+idTypePokemon+"2");
+    for (let i = 0; i < buttonType.length; i++) {
+        buttonType[i].addEventListener("click", () => {
+            // llamamos a la funcion window.pokemons.filterByType que hace el trabajo de filtrarlos por tipo, pasandole a la funcion las variables allPokemon, que son todos los pokemones. Y idTypePokemon que es el tipo de pokemon (el id del boton).
+            // Guardamos lo que nos devuelve la funcion window.pokemons.filterByType en la variable currentPokemon (global) que contiene los pokemones filtrados u ordenados.
+            currentPokemon = window.window.pokemons.filterByType(allPokemon, idTypePokemon);
+
+            // Actualizamos el titulo del tipo de pokemon que estamos viendo o que vamos a ver.
+            document.getElementById("name-type").innerHTML = document.getElementById(idTypePokemon).value;
+
+            // Llamamos a la funcion fillWithPokemons y le pasamos currentPokemon que contiene los pokemones filtrados arriba.
+            fillWithPokemons(currentPokemon);
+            //función calcular
+            let average = window.pokemons.computeStats(allPokemon, currentPokemon);
+            document.getElementById("averagepokemon").innerHTML = `Esta categoría corresponde al: ${average}% de los Pokemones`;
+
+        })
+    }
+
+}
 // Se ejecuta clicksButtonType por cada uno de los tipos de pokemon (con un for) que en este caso estan como button.
 let buttonArray = ["Grass", "Poison", "Flying", "Fire", "Water", "Bug", "Normal", "Electric", "Ground", "Fighting", "Psychic", "Rock", "Ice", "Ghost", "Dragon"];
 for (let i = 0; i < buttonArray.length; i++){
     clicksButtonType(buttonArray[i]);
+    clicksButtonType2(buttonArray[i]);
 }
 
 // cuando se hace click en el boton Ver Todos, se ejecuta la funcion fillWithPokemons pasandole la variable allPokemon que contiene todos los pokemones
